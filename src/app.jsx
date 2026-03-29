@@ -7,7 +7,7 @@ export function App() {
   return (
     <>
     <Navbar/>
-      <h1 className=''>Hello PRoject</h1>
+    
     </>
   )
 }
