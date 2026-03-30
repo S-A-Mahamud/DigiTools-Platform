@@ -1,9 +1,9 @@
 
 import './app.css';
-import AllProducts from './components/homepage/allProducts/AllProducts';
+import Navbar from './components/navbar/Navbar';
 import Banner from './components/homepage/Banner';
 import StacksSection from './components/homepage/StacksSection';
-import Navbar from './components/navbar/Navbar';
+import AllProducts from './components/homepage/allProducts/AllProducts';
 
 export function App() {
 

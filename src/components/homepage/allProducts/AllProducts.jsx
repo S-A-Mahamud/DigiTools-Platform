@@ -4,10 +4,10 @@ import Cart from './cart/cart';
 
 const AllProducts = () => {
     const [productsData, setProductsData] = useState([]);
-
     const [selectedCategory, setSelectedCategory] = useState('products');
-
     const [productCart, setProductCart] = useState([]);
+
+    console.log("PARENT CART:", productCart);
 
     useEffect(() => {
         fetch('/data.json')
@@ -20,8 +20,6 @@ const AllProducts = () => {
             });
     }, []);
 
-    // console.log(productsData);
-
     return (
         <div className='max-w-7xl mx-auto mb-10'>
             <div className="flex flex-col items-center text-center gap-4">
@@ -31,21 +29,36 @@ const AllProducts = () => {
                 </p>
 
                 <div className='flex bg-gray-200 p-2 rounded-full'>
-                    <a className={`btn ${selectedCategory === 'products' ? 'btn-primary' : 'btn-ghost'} rounded-full`} onClick={() => setSelectedCategory('products')}>
+                    <button
+                        type="button"
+                        className={`btn ${selectedCategory === 'products' ? 'btn-primary' : 'btn-ghost'} rounded-full`}
+                        onClick={() => setSelectedCategory('products')}
+                    >
                         Products
-                    </a>
-                    <a className={`btn ${selectedCategory === 'cart' ? 'btn-primary' : 'btn-ghost'} rounded-full`} onClick={() => setSelectedCategory('cart')}>
+                    </button>
+
+                    <button
+                        type="button"
+                        className={`btn ${selectedCategory === 'cart' ? 'btn-primary' : 'btn-ghost'} rounded-full`}
+                        onClick={() => setSelectedCategory('cart')}
+                    >
                         Cart ({productCart.length})
-                    </a>
+                    </button>
                 </div>
             </div>
 
-        {
-            selectedCategory === 'products' ? 
-            <Products productsData={productsData}  setProductCart={setProductCart} productCart={productCart}/> : 
-            <Cart productCart={productCart} />
-        }
- 
+            {
+                selectedCategory === 'products'
+                    ? <Products
+                        productsData={productsData}
+                        productCart={productCart}
+                        setProductCart={setProductCart}
+                    />
+                    : <Cart
+                        productCart={productCart}
+                        setProductCart={setProductCart}
+                    />
+            }
         </div>
     );
 };
