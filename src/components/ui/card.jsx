@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { FaCheck } from "react-icons/fa";
+
 // import { designToolImg } from '../../assets/toolsIcons';
 
 //  {
@@ -17,12 +19,21 @@ import React from 'react';
 //   }
 
 const Card = ({ product }) => {
+
+    const [isAdded, setIsAdded] = useState(false);
+
+    const handleAddToCart = () => {
+        setIsAdded(true);
+    }
+
     return (
         <div>
             <div className="card bg-base-100 shadow-sm">
                 <div className="card-body">
                     <div className='flex justify-end'>
-                        <span className="badge badge-xs badge-warning p-3 rounded-full">{product.tagType}</span>
+                        <span className={`badge badge-xs p-3 rounded-full ${
+                            product.tagType === 'Best Seller' ? 'badge-warning text-amber-700' : 
+                            product.tagType === 'Popular' ? 'badge-primary text-indigo-300' : 'badge-success text-green-800'}`}>{product.tagType}</span>
                     </div>
                     <div className='bg-gray-100 p-2 border border-gray-300 rounded-full w-16 h-16 flex items-center justify-center mb-4'>
                         <img src={product.icon} alt={product.name} />
@@ -42,7 +53,12 @@ const Card = ({ product }) => {
 
                     </ul>
                     <div className="mt-6">
-                        <button className="btn btn-primary btn-block">Buy Now</button>
+                        <button onClick={handleAddToCart}
+
+                        className={`btn ${isAdded ? 'btn-success text-white' : 'btn-primary'} btn-block`}>
+                            {isAdded ? <FaCheck className='me-1' /> : null}
+                            {isAdded ?  'Added to Cart' : 'Buy Now'}
+                        </button>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,8 @@ import Products from './products/Products';
 const AllProducts = () => {
     const [productsData, setProductsData] = useState([]);
 
+    const [selectedCategory, setSelectedCategory] = useState('products');
+
     useEffect(() => {
         fetch('/data.json')
             .then(res => res.json())
@@ -25,9 +27,13 @@ const AllProducts = () => {
                     Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
                 </p>
 
-                <div className='flex gap-4'>
-                    <a className='btn btn-primary rounded-full'>Products</a>
-                    <a className='btn rounded-full'>Cart (0)</a>
+                <div className='flex bg-gray-200 p-2 rounded-full'>
+                    <a className={`btn ${selectedCategory === 'products' ? 'btn-primary' : 'btn-ghost'} rounded-full`} onClick={() => setSelectedCategory('products')}>
+                        Products
+                    </a>
+                    <a className={`btn ${selectedCategory === 'cart' ? 'btn-primary' : 'btn-ghost'} rounded-full`} onClick={() => setSelectedCategory('cart')}>
+                        Cart (0)
+                    </a>
                 </div>
             </div>
 
