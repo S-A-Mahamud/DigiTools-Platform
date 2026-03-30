@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Products from './products/Products';
 import Cart from './cart/cart';
 
-const AllProducts = () => {
+const AllProducts = ({productCart, setProductCart}) => {
     const [productsData, setProductsData] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('products');
-    const [productCart, setProductCart] = useState([]);
 
-    console.log("PARENT CART:", productCart);
 
     useEffect(() => {
         fetch('/data.json')
