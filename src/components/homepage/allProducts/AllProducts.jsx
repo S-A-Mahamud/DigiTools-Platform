@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Products from './products/Products';
+import Cart from './cart/cart';
 
 const AllProducts = () => {
     const [productsData, setProductsData] = useState([]);
 
     const [selectedCategory, setSelectedCategory] = useState('products');
+
+    const [productCart, setProductCart] = useState([]);
 
     useEffect(() => {
         fetch('/data.json')
@@ -17,7 +20,7 @@ const AllProducts = () => {
             });
     }, []);
 
-    console.log(productsData);
+    // console.log(productsData);
 
     return (
         <div className='max-w-7xl mx-auto mb-10'>
@@ -32,12 +35,17 @@ const AllProducts = () => {
                         Products
                     </a>
                     <a className={`btn ${selectedCategory === 'cart' ? 'btn-primary' : 'btn-ghost'} rounded-full`} onClick={() => setSelectedCategory('cart')}>
-                        Cart (0)
+                        Cart ({productCart.length})
                     </a>
                 </div>
             </div>
 
-        <Products productsData={productsData} />
+        {
+            selectedCategory === 'products' ? 
+            <Products productsData={productsData}  setProductCart={setProductCart} productCart={productCart}/> : 
+            <Cart productCart={productCart} />
+        }
+ 
         </div>
     );
 };

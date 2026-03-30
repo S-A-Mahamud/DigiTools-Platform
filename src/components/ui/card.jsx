@@ -18,12 +18,13 @@ import { FaCheck } from "react-icons/fa";
 //     "icon": "https://img.icons8.com/color/96/artificial-intelligence.png"
 //   }
 
-const Card = ({ product }) => {
+const Card = ({ product, productCart, setProductCart }) => {
 
     const [isAdded, setIsAdded] = useState(false);
 
     const handleAddToCart = () => {
         setIsAdded(true);
+        setProductCart([...productCart, product]);
     }
 
     return (
