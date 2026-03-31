@@ -1,11 +1,11 @@
-
 import './app.css';
+import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Banner from './components/homepage/Banner';
 import StatsSection from './components/homepage/StatsSection';
 import AllProducts from './components/homepage/allProducts/AllProducts';
 import StepsSection from './components/homepage/StepsSection';
-import { useState } from 'react';
+import PricingSection from './components/homepage/PricingSection';
 
 export function App() {
 
@@ -18,6 +18,7 @@ export function App() {
       <StatsSection />
       <AllProducts productCart={productCart} setProductCart={setProductCart} />
       <StepsSection />
+      <PricingSection />
     </>
   )
 }

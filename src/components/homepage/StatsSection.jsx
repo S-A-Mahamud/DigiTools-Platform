@@ -1,8 +1,8 @@
 import React from 'react';
 
-const StacksSection = () => {
+const StatsSection = () => {
     return (
-        <div class="gradient-bg mt-20 mb-30">
+        <div className="gradient-bg mb-30">
             <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-white py-15 px-6 gap-6 md:gap-0">
 
                 <div class="flex flex-col items-center md:items-start gap-4">
@@ -29,4 +29,4 @@ const StacksSection = () => {
     );
 };
 
-export default StacksSection;
+export default StatsSection;
