@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar';
 import Banner from './components/homepage/Banner';
 import StatsSection from './components/homepage/StatsSection';
 import AllProducts from './components/homepage/allProducts/AllProducts';
+import StepsSection from './components/homepage/StepsSection';
 import { useState } from 'react';
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
       <Banner />
       <StatsSection />
       <AllProducts productCart={productCart} setProductCart={setProductCart} />
+      <StepsSection />
     </>
   )
 }

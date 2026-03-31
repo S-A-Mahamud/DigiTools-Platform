@@ -1,15 +1,69 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* Custom styles can be added here */
-.gradient-bg {
-  background: linear-gradient(to right, rgba(79, 57, 246, 1) 0%,rgba(149, 20, 250, 1) 100%);
+/* =========================
+   Shared Gradient Variables
+========================= */
+:root {
+  --primary-gradient: linear-gradient(
+    to right,
+    rgba(79, 57, 246, 1) 0%,
+    rgba(149, 20, 250, 1) 100%
+  );
+  --primary-solid: rgba(79, 57, 246, 1);
 }
 
+/* =========================
+   Shared Gradient Background
+========================= */
+.gradient-bg {
+  background-image: var(--primary-gradient);
+}
 
-/* Shared Gradient Tooltip */
+/* =========================
+   Shared Gradient Text
+   Use this on <span> / text only
+========================= */
+.gradient-text {
+  display: inline-block;
+  background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* =========================
+   Shared Gradient Border
+   Use with bg-white / bg-black etc.
+========================= */
+.border-gradient-r-to {
+  position: relative;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.border-gradient-r-to::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: 10.75rem; /* match the element's border-radius */
+  background: var(--primary-gradient);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* =========================
+   Shared Gradient Tooltip
+========================= */
 .tooltip-gradient::before {
-  background: linear-gradient(to right, rgba(79, 57, 246, 1) 0%,rgba(149, 20, 250, 1) 100%);
+  background: var(--primary-gradient) !important;
   color: white;
   border-radius: 0.75rem;
   font-size: 0.75rem;
@@ -21,5 +75,5 @@
 
 /* Tooltip arrow */
 .tooltip-gradient::after {
-  border-color: #7c3aed transparent transparent transparent;
-} 
+  border-color: var(--primary-solid) transparent transparent transparent !important;
+}

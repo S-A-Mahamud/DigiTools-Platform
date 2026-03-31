@@ -21,7 +21,7 @@ const Navbar = ({ productCart }) => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <a className=" text-xl">DigiTools</a>
+                    <a className="gradient-text text-4xl font-extrabold">DigiTools</a>
                 </div>
 
                 {/* Navbar center */}
