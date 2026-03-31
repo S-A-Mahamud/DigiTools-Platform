@@ -51,7 +51,7 @@ const Cart = ({ productCart, setProductCart }) => {
                             <button
                                 type="button"
                                 onClick={() => handleRemoveFromCart(product.id)}
-                                className='me-4 p-2 cursor-pointer text-red-600 tooltip tooltip-left tooltip-gradient-to-tl tooltip-secondary'
+                                className='me-4 p-2 gradient-bg rounded-full cursor-pointer text-red-600 tooltip tooltip-left tooltip-gradient'
                                 data-tip="Remove"
                             >
                                 <MdDelete className='w-8 h-8' />
@@ -67,7 +67,7 @@ const Cart = ({ productCart, setProductCart }) => {
                     <button
                     onClick={handleCheckout}
                         type="button"
-                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer'
+                        className='gradient-bg text-white font-bold py-2 px-4 rounded cursor-pointer'
                     >
                         Proceed to Checkout
                     </button>

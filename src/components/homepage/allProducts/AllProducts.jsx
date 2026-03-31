@@ -29,7 +29,7 @@ const AllProducts = ({productCart, setProductCart}) => {
                 <div className='flex bg-gray-200 p-2 rounded-full'>
                     <button
                         type="button"
-                        className={`btn ${selectedCategory === 'products' ? 'btn-primary' : 'btn-ghost'} rounded-full`}
+                        className={`btn ${selectedCategory === 'products' ? 'gradient-bg text-white' : 'btn-ghost'} rounded-full`}
                         onClick={() => setSelectedCategory('products')}
                     >
                         Products
@@ -37,7 +37,7 @@ const AllProducts = ({productCart, setProductCart}) => {
 
                     <button
                         type="button"
-                        className={`btn ${selectedCategory === 'cart' ? 'btn-primary' : 'btn-ghost'} rounded-full`}
+                        className={`btn ${selectedCategory === 'cart' ? 'gradient-bg text-white' : 'btn-ghost'} rounded-full`}
                         onClick={() => setSelectedCategory('cart')}
                     >
                         Cart ({productCart.length})

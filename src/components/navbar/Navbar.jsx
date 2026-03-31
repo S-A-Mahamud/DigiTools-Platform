@@ -1,5 +1,5 @@
 import React from 'react';
-import { shoppingCartImg } from '../../assets/images';
+import { IoCartOutline } from "react-icons/io5";
 
 const Navbar = ({ productCart }) => {
     return (
@@ -21,7 +21,7 @@ const Navbar = ({ productCart }) => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">DigiTools</a>
+                    <a className=" text-xl">DigiTools</a>
                 </div>
 
                 {/* Navbar center */}
@@ -37,7 +37,7 @@ const Navbar = ({ productCart }) => {
                 <div className="navbar-end gap-4">
                     {/* Cart icon with badge */}
                     <div className="relative cursor-pointer">
-                        <img src={shoppingCartImg} alt="Cart" className="w-8 h-8" />
+                        <IoCartOutline className='text-3xl text-gray-400' />
 
                         {productCart.length > 0 && (
                             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
@@ -47,7 +47,7 @@ const Navbar = ({ productCart }) => {
                     </div>
 
                     <a href="/login">Login</a>
-                    <a className="btn btn-primary rounded-full">Get started</a>
+                    <a className="btn gradient-bg text-white rounded-full">Get started</a>
                 </div>
             </div>
         </div>

@@ -54,7 +54,7 @@ const Card = ({ product, productCart, setProductCart }) => {
                         <button
                             type="button"
                             onClick={() => handleAddToCart(product)}
-                            className={`btn ${isAdded ? 'btn-success text-white' : 'btn-primary'} btn-block`}
+                            className={`btn rounded-full ${isAdded ? 'btn-success text-white' : 'gradient-bg text-white'} btn-block`}
                         >
                             {isAdded ? <FaCheck className='me-1' /> : null}
                             {isAdded ? 'Added to Cart' : 'Buy Now'}

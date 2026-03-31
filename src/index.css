@@ -1,2 +1,25 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Custom styles can be added here */
+.gradient-bg {
+  background: linear-gradient(to right, rgba(79, 57, 246, 1) 0%,rgba(149, 20, 250, 1) 100%);
+}
+
+
+/* Shared Gradient Tooltip */
+.tooltip-gradient::before {
+  background: linear-gradient(to right, rgba(79, 57, 246, 1) 0%,rgba(149, 20, 250, 1) 100%);
+  color: white;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tooltip arrow */
+.tooltip-gradient::after {
+  border-color: #7c3aed transparent transparent transparent;
+} 
