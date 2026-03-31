@@ -6,6 +6,8 @@ import StatsSection from './components/homepage/StatsSection';
 import AllProducts from './components/homepage/allProducts/AllProducts';
 import StepsSection from './components/homepage/StepsSection';
 import PricingSection from './components/homepage/PricingSection';
+import WorkflowSection from './components/homepage/WorkflowSection';
+import Footer from './components/footer/Footer';
 
 export function App() {
 
@@ -19,6 +21,8 @@ export function App() {
       <AllProducts productCart={productCart} setProductCart={setProductCart} />
       <StepsSection />
       <PricingSection />
+      <WorkflowSection/>
+      <Footer/>
     </>
   )
 }
