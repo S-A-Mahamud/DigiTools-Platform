@@ -1,18 +1,19 @@
 import React from 'react';
 import { IoCartOutline } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
+import { toast } from 'react-toastify';
 
 const Cart = ({ productCart, setProductCart }) => {
     const handleRemoveFromCart = (productId) => {
         const updatedCart = productCart.filter(item => item.id !== productId);
         setProductCart(updatedCart);
-        console.log("Removed:", productId);
-        console.log("Updated cart:", updatedCart);
+        // console.log("Removed:", productId);
+        // console.log("Updated cart:", updatedCart);
     };
 
     const handleCheckout = () => {
         setProductCart([]);
-        alert("Thank you for your purchase!");
+        toast("Thank you for your purchase!");
     }
 
     const totalPrice = productCart.reduce((total, product) => total + product.price, 0);
@@ -50,7 +51,10 @@ const Cart = ({ productCart, setProductCart }) => {
 
                             <button
                                 type="button"
-                                onClick={() => handleRemoveFromCart(product.id)}
+                                onClick={() => {
+                                    handleRemoveFromCart(product.id);
+                                    toast("Product removed from cart!");
+                                }}
                                 className='me-4 p-2 gradient-bg rounded-full cursor-pointer text-red-600 tooltip tooltip-left tooltip-gradient'
                                 data-tip="Remove"
                             >

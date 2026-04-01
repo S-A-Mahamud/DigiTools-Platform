@@ -1,13 +1,17 @@
 import React from 'react';
 import { FaCheck } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const Card = ({ product, productCart, setProductCart }) => {
     const isAdded = productCart.some(item => item.id === product.id);
 
     const handleAddToCart = (product) => {
         if (isAdded) {
-            alert("Product already added!");
+            toast("Product already added!");
             return;
+        }
+        else {
+            toast("Product added to cart!");
         }
 
         setProductCart(prevCart => [...prevCart, product]);
@@ -55,6 +59,7 @@ const Card = ({ product, productCart, setProductCart }) => {
                             type="button"
                             onClick={() => handleAddToCart(product)}
                             className={`btn rounded-full ${isAdded ? 'btn-success text-white' : 'gradient-bg text-white'} btn-block`}
+                            
                         >
                             {isAdded ? <FaCheck className='me-1' /> : null}
                             {isAdded ? 'Added to Cart' : 'Buy Now'}

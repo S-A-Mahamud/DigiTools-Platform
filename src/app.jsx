@@ -8,6 +8,7 @@ import StepsSection from './components/homepage/StepsSection';
 import PricingSection from './components/homepage/PricingSection';
 import WorkflowSection from './components/homepage/WorkflowSection';
 import Footer from './components/footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 export function App() {
 
@@ -23,6 +24,9 @@ export function App() {
       <PricingSection />
       <WorkflowSection/>
       <Footer/>
+
+      {/*React Toast Container */}
+      <ToastContainer/>
     </>
   )
 }
