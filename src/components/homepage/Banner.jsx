@@ -3,15 +3,15 @@ import { bannerImg, playImg } from '../../assets/Images/index';
 
 const Banner = () => {
     return (
-        <div className="flex justify-between items-center gap-10 py-20 px-4 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10 py-20 px-4 max-w-7xl mx-auto">
             <div className="space-y-6 flex-1">
                 <span className="bg-[#E1E7FF] p-2 rounded-full inline-block">
-                    <span className="p-2 rounded-full gradient-text">
+                    <span className="p-2 rounded-full text-gradient-brand">
                         New: AI-Powered Tools Available
                     </span>
                 </span>
 
-                <h2 className="text-[#101727] font-extrabold text-7xl">
+                <h2 className="text-[#101727] font-extrabold text-2xl  md:text-7xl">
                     Supercharge Your Digital Workflow
                 </h2>
 
@@ -40,7 +40,7 @@ const Banner = () => {
                 <img
                     src={bannerImg}
                     alt="Banner"
-                    className="w-full max-w-[500px] h-auto"
+                    className="w-full max-w-125 h-auto"
                 />
             </div>
         </div>
