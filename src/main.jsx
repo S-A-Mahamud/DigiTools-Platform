@@ -1,7 +1,7 @@
-// Main entry point for the Preact application
-import { render } from 'preact'
-import './index.css'
-import { App } from './app.jsx'
+// Main entry point for the React application
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { App } from './app.jsx';
 
 // Render the App component into the root element
-render(<App />, document.getElementById('app'))
+createRoot(document.getElementById('app')).render(<App />);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Products from './products/Products';
-import Cart from './cart/cart';
+import Cart from './cart/Cart';
 
 // Component to display all products and manage the product cart
 const AllProducts = ({productCart, setProductCart}) => {
