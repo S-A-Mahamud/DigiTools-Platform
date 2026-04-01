@@ -1,3 +1,4 @@
+// Main application component for the DigiTools Platform
 import './app.css';
 import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
@@ -12,21 +13,27 @@ import { ToastContainer } from 'react-toastify';
 
 export function App() {
 
-   const [productCart, setProductCart] = useState([]);
+  const [productCart, setProductCart] = useState([]);
 
   return (
     <>
-      <Navbar productCart={productCart} />
-      <Banner />
-      <StatsSection />
-      <AllProducts productCart={productCart} setProductCart={setProductCart} />
-      <StepsSection />
-      <PricingSection />
-      <WorkflowSection/>
-      <Footer/>
+      <header>
+        <Navbar productCart={productCart} />
+      </header>
+      <main>
+        <Banner />
+        <StatsSection />
+        <AllProducts productCart={productCart} setProductCart={setProductCart} />
+        <StepsSection />
+        <PricingSection />
+        <WorkflowSection />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
 
       {/*React Toast Container */}
-      <ToastContainer/>
+      <ToastContainer />
     </>
   )
 }

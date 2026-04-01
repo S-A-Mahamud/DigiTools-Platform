@@ -1,11 +1,14 @@
+/* Index CSS */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* Theme Variables */
 @theme {
   --font-manrope: "Manrope", sans-serif;
 }
 
+/* Body Styles font */
 body {
   font-family: var(--font-manrope);
 }
@@ -23,36 +26,15 @@ body {
   --primary-solid: rgba(79, 57, 246, 1);
 }
 
-/* =========================
-   Shared Gradient Background
-========================= */
-/* .gradient-bg {
-  background-image: var(--primary-gradient);
-} */
 
-/* =========================
-   Shared Gradient Text
-   Use this on <span> / text only
-========================= */
-/* .gradient-text {
-  display: inline-block;
-  background-image: var(--primary-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-} */
-
-/* =========================
-   Shared Gradient Border
-   Use with bg-white / bg-black etc.
-========================= */
+/* Shared Gradient Border */
 .border-gradient-r-to {
   position: relative;
   border-radius: inherit;
   z-index: 0;
 }
 
+/* Shared Gradient Border Pseudo-element */
 .border-gradient-r-to::before {
   content: "";
   position: absolute;
@@ -69,17 +51,21 @@ body {
   pointer-events: none;
 }
 
+/* Shared Gradient Text */
 @utility text-gradient-brand {
-  @apply bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent;
+  background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
+/* Shared Gradient Background */
 @utility gradient-bg {
-  @apply bg-gradient-to-r from-[#4F39F6] to-[#9514FA];
+  background-image: var(--primary-gradient);
 }
 
-/* =========================
-   Shared Gradient Tooltip
-========================= */
+
+/* Shared Gradient Tooltip */
 .tooltip-gradient::before {
   background: var(--primary-gradient) !important;
   color: white;

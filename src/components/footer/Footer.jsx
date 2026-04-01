@@ -11,8 +11,8 @@ const Footer = () => {
             <div class="max-w-7xl mx-auto py-10 md:py-16">
 
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 md:mb-10 px-4 md:px-0">
-                    <div class="">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4 md:mb-10 px-4">
+                    <div class="mb-4 col-span-2 lg:col-span-1">
                         <h2 class="text-white text-2xl font-bold mb-4">DigiTools</h2>
                         <p class="text-sm leading-relaxed opacity-80">
                             Premium digital tools for creators, professionals, and businesses.
@@ -20,7 +20,7 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 col-span-2">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 col-span-2 lg:col-span-3">
 
                         <div>
                             <h3 class="text-white font-semibold mb-4">Product</h3>
@@ -33,8 +33,8 @@ const Footer = () => {
                         </div>
 
 
-                        <div>
-                            <h3 class="text-white font-semibold mb-4">Company</h3>
+                        <div className='md:pl-10 lg:pl-0'>
+                            <h3 class="text-white font-semibold mb-4 ">Company</h3>
                             <ul class="space-y-2 text-sm">
                                 <li><a href="#" class="hover:text-white">About</a></li>
                                 <li><a href="#" class="hover:text-white">Blog</a></li>
@@ -54,17 +54,17 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div>
+                        <div className='md:pl-10 lg:pl-0'>
                             <h3 class="text-white font-semibold mb-3">Social Links</h3>
-                            <div class="flex gap-1 md:gap-3">
-                                <button class="btn btn-circle btn-md bg-white text-black hover:bg-gray-200">
-                                    <TbBrandInstagramFilled className='w-4 h-4 md:w-8 md:h-8' />
+                            <div class="flex gap-2">
+                                <button class="btn btn-circle btn-sm md:btn-md bg-white text-black hover:bg-gray-200">
+                                    <TbBrandInstagramFilled className='w-8 h-8' />
                                 </button>
-                                <button class="btn btn-circle btn-md bg-white text-black hover:bg-gray-200">
-                                    <FaFacebookSquare className='w-3 h-3 md:w-6 md:h-6' />
+                                <button class="btn btn-circle btn-sm md:btn-md bg-white text-black hover:bg-gray-200">
+                                    <FaFacebookSquare className='w-6 h-6' />
                                 </button>
-                                <button class="btn btn-circle btn-md bg-white text-black hover:bg-gray-200">
-                                    <FaXTwitter className='w-3 h-3 md:w-6 md:h-6' />
+                                <button class="btn btn-circle btn-sm md:btn-md bg-white text-black hover:bg-gray-200">
+                                    <FaXTwitter className='w-6 h-6' />
                                 </button>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ const Footer = () => {
 
                 <div class="border-t border-gray-700 my-4 md:my-10"></div>
 
-                <div class="flex flex-col md:flex-row justify-between items-center text-sm opacity-70 gap-4">
+                <div class="flex flex-col sm:flex-row justify-between items-center text-sm opacity-70 gap-2 px-2 md:px-4">
                     <p>© 2026 Digitools. All rights reserved.</p>
 
                     <div class="flex gap-6">

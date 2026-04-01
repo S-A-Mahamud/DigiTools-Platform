@@ -7,11 +7,11 @@ const Navbar = ({ productCart }) => {
 
     const navLinks = (
         <>
-            <li><a className="hover:text-primary transition">Home</a></li>
-            <li><a className="hover:text-primary transition">Tools</a></li>
+            <li><a className="hover:text-primary transition">Products</a></li>
+            <li><a className="hover:text-primary transition">Features</a></li>
             <li><a className="hover:text-primary transition">Pricing</a></li>
-            <li><a className="hover:text-primary transition">About</a></li>
-            <li><a className="hover:text-primary transition">Contact</a></li>
+            <li><a className="hover:text-primary transition">Testimonials</a></li>
+            <li><a className="hover:text-primary transition">FAQ</a></li>
         </>
     );
 
@@ -22,6 +22,7 @@ const Navbar = ({ productCart }) => {
 
                     {/* Navbar Start */}
                     <div className="navbar-start gap-3">
+
                         {/* Mobile menu button */}
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -35,7 +36,7 @@ const Navbar = ({ productCart }) => {
                             </span>
                         </button>
 
-                        {/* Logo */}
+                        {/* Logo/Brand */}
                         <a
                             href="/"
                             className="text-gradient-brand text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight"
@@ -84,12 +85,12 @@ const Navbar = ({ productCart }) => {
                 {/* Mobile Menu */}
                 <div
                     className={`lg:hidden absolute left-0 top-full w-full px-3 sm:px-4 transition-all duration-500 ease-in-out origin-top z-40 ${isMenuOpen
-                            ? "opacity-100 translate-y-0 scale-y-100 pointer-events-auto"
-                            : "opacity-0 -translate-y-3 scale-y-95 pointer-events-none"
+                        ? "opacity-100 translate-y-0 scale-y-100 pointer-events-auto"
+                        : "opacity-0 -translate-y-3 scale-y-95 pointer-events-none"
                         }`}
                 >
                     <div className="bg-base-100 rounded-2xl shadow-xl border border-base-200 p-4 mt-2 overflow-hidden">
-                        <ul className="menu gap-2 font-medium text-[15px]">
+                        <ul className="menu gap-2 font-medium text-[15px] w-full">
                             {navLinks}
 
 
@@ -101,7 +102,7 @@ const Navbar = ({ productCart }) => {
                             </li>
 
                             <li>
-                                <div className="flex items-center justify-between px-2 py-2 rounded-lg hover:bg-base-200 transition-colors duration-300">
+                                <div className="inline-flex px-2 rounded-lg hover:bg-base-200 transition-colors duration-300">
                                     <span className="font-medium"> Your Cart </span>
 
                                     <div className="relative flex items-center justify-center">
@@ -110,7 +111,7 @@ const Navbar = ({ productCart }) => {
                                         </div>
 
                                         {productCart?.length > 0 && (
-                                            <span className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 bg-red-500 text-white text-[10px] font-bold min-w-4.5 h-4.5 px-1 rounded-full flex items-center justify-center shadow">
+                                            <span className="absolute top-0 right-0 translate-x-1/8 -translate-y-1/8 bg-red-500 text-white text-[10px] font-bold min-w-4.5 h-4.5 px-1 rounded-full flex items-center justify-center shadow">
                                                 {productCart.length}
                                             </span>
                                         )}
@@ -118,8 +119,8 @@ const Navbar = ({ productCart }) => {
                                 </div>
                             </li>
 
-                            <li className="mt-3 w-full">
-                                <a className="btn gradient-bg text-white rounded-full border-none  hover:scale-[1.02] transition-transform duration-300 shadow-md ">
+                            <li className="mt-3">
+                                <a className="btn w-full flex justify-center gradient-bg text-white rounded-full border-none hover:scale-[1.02] transition-transform duration-300 shadow-md">
                                     Get Started
                                 </a>
                             </li>

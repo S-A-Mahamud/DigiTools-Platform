@@ -1,7 +1,9 @@
+// Card.jsx - A reusable card component for displaying product information and handling cart interactions in the DigiTools Platform.
 import React from 'react';
 import { FaCheck } from "react-icons/fa";
 import { toast } from 'react-toastify';
 
+// card componnent for products deatils and add to cart functionality
 const Card = ({ product, productCart, setProductCart }) => {
     const isAdded = productCart.some(item => item.id === product.id);
 
@@ -19,7 +21,7 @@ const Card = ({ product, productCart, setProductCart }) => {
 
     return (
         <div>
-            <div className="card bg-base-100 shadow-sm">
+            <div className="card bg-base-100 shadow-md h-full">
                 <div className="card-body">
                     <div className='flex justify-end'>
                         <span
@@ -58,7 +60,7 @@ const Card = ({ product, productCart, setProductCart }) => {
                         <button
                             type="button"
                             onClick={() => handleAddToCart(product)}
-                            className={`btn rounded-full ${isAdded ? 'btn-success text-white' : 'gradient-bg text-white'} btn-block`}
+                            className={`btn rounded-full p-4 ${isAdded ? 'btn-success text-white' : 'gradient-bg text-white'} btn-block`}
                             
                         >
                             {isAdded ? <FaCheck className='me-1' /> : null}

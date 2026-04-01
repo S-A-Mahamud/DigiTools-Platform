@@ -19,7 +19,7 @@ const Cart = ({ productCart, setProductCart }) => {
     const totalPrice = productCart.reduce((total, product) => total + product.price, 0);
 
     return (
-        <div className='bg-gray-200 border border-gray-300 rounded-lg p-6 my-10 w-full'>
+        <div className='border border-gray-300 rounded-lg my-10 px-2 md:px-4 py-2 md:py-4'>
             <p className='text-xl font-bold'>Your Cart</p>
 
             {productCart.length === 0 ? (
@@ -32,10 +32,10 @@ const Cart = ({ productCart, setProductCart }) => {
                     {productCart.map(product => (
                         <div
                             key={product.id}
-                            className="card bg-base-100 shadow-sm flex-row items-center justify-between"
+                            className="card bg-base-200 shadow-sm flex-row items-center justify-between"
                         >
-                            <div className="card-body flex flex-row items-center gap-4">
-                                <div className='w-16 h-16 bg-gray-100 p-4 border border-gray-300 rounded-full flex items-center justify-center'>
+                            <div className="card-body flex flex-row items-center gap-2 md:gap-4">
+                                <div className='w-8 h-8 md:w-16 md:h-16 bg-gray-100 p-2 border border-gray-300 rounded-full flex items-center justify-center'>
                                     <img
                                         src={product.icon}
                                         alt={product.name}
@@ -44,8 +44,8 @@ const Cart = ({ productCart, setProductCart }) => {
                                 </div>
 
                                 <div className='flex flex-col justify-center'>
-                                    <h3 className="text-xl font-bold">{product.name}</h3>
-                                    <span className="text-xl">${product.price}</span>
+                                    <h3 className="text-sm md:text-xl font-bold">{product.name}</h3>
+                                    <span className="text-sm md:text-xl">${product.price}</span>
                                 </div>
                             </div>
 
@@ -58,7 +58,7 @@ const Cart = ({ productCart, setProductCart }) => {
                                 className='me-4 p-2 gradient-bg rounded-full cursor-pointer text-red-600 tooltip tooltip-left tooltip-gradient'
                                 data-tip="Remove"
                             >
-                                <MdDelete className='w-8 h-8' />
+                                <MdDelete className='md:w-8 md:h-8' />
                             </button>
                         </div>
                     ))}
@@ -71,7 +71,7 @@ const Cart = ({ productCart, setProductCart }) => {
                     <button
                     onClick={handleCheckout}
                         type="button"
-                        className='gradient-bg text-white font-bold py-2 px-4 rounded cursor-pointer'
+                        className='gradient-bg text-white font-bold py-2 px-4 text-sm sm:text-xl rounded cursor-pointer'
                     >
                         Proceed to Checkout
                     </button>

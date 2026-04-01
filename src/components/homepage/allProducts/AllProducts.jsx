@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Products from './products/Products';
 import Cart from './cart/cart';
 
+// Component to display all products and manage the product cart
 const AllProducts = ({productCart, setProductCart}) => {
     const [productsData, setProductsData] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('products');
@@ -19,9 +20,9 @@ const AllProducts = ({productCart, setProductCart}) => {
     }, []);
 
     return (
-        <div className='max-w-7xl mx-auto mb-10'>
+        <section className='max-w-7xl mx-auto mb-10 px-4'>
             <div className="flex flex-col items-center text-center gap-4">
-                <h2 className='text-5xl font-semibold'>Premium Digital Tools</h2>
+                <h2 className='text-xl sm:text-3xl md:text-5xl font-semibold'>Premium Digital Tools</h2>
                 <p className='max-w-lg'>
                     Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
                 </p>
@@ -57,7 +58,7 @@ const AllProducts = ({productCart, setProductCart}) => {
                         setProductCart={setProductCart}
                     />
             }
-        </div>
+        </section>
     );
 };
 
