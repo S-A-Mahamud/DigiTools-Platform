@@ -58,15 +58,5 @@ Users can explore products, view key details, add/remove items from cart, and co
   - Designed according to Figma
 - **Responsive Design**
   - Mobile-first and fully responsive layout
-- **Challenge Part**
-  - React-Toastify integration
-  - Remove single product from cart
-  - Clear all products on checkout
-
-## Optional Features
-
-- Clicking a product increases cart count in navbar
-- `Buy Now` interaction can show an "Added to cart" state/message
-- Checkout resets cart count
 
 
