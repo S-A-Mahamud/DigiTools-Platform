@@ -12,12 +12,12 @@ const PricingSection = () => {
                 <div className="card bg-base-100 shadow-sm h-full">
                     <div className="card-body flex flex-col h-full">
                         <div>
-                            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold">Premium</h2>
+                            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold">Starter</h2>
                             <p>Perfect for getting started</p>
                         </div>
 
                         <h3 className="text-xl sm:text-3xl  md:text-4xl mt-4">
-                            $29/<span className="text-xl">Month</span>
+                            $0/<span className="text-xl">Month</span>
                         </h3>
 
                         <ul className="mt-6 flex flex-col gap-2 text-xs">
@@ -25,25 +25,25 @@ const PricingSection = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>High-resolution image generation</span>
+                                <span>Access to 10 free tools</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Customizable style templates</span>
+                                <span>Basic templates</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>Batch processing capabilities</span>
+                                <span>Community support</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                 </svg>
-                                <span>AI-driven image enhancements</span>
+                                <span>1 project per month</span>
                             </li>
                         </ul>
 
@@ -58,40 +58,40 @@ const PricingSection = () => {
                     <div className="card-body text-white flex flex-col h-full">
                         <span className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 badge badge-xs badge-warning text-amber-700 rounded-full p-4">Most Popular</span>
                         <div className="">
-                            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold">Premium</h2>
-                            <p>Perfect for getting started</p>
+                            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold">Pro</h2>
+                            <p>Best for professionals</p>
                         </div>
                         <h3 className="text-xl sm:text-3xl  md:text-4xl">$29/<span className='text-xl'>Month</span></h3>
                         <ul className="mt-6 flex flex-col gap-2 text-xs">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>High-resolution image generation</span>
+                                <span>Access to all premium tools</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Customizable style templates</span>
+                                <span>Unlimited templates</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Batch processing capabilities</span>
+                                <span>Priority support</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>AI-driven image enhancements</span>
+                                <span>Unlimited projects</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>AI-driven image enhancements</span>
+                                <span>Cloud sync</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>AI-driven image enhancements</span>
+                                <span>Advanced analytics</span>
                             </li>
 
                         </ul>
                         <div className="mt-6">
                             <div className='btn w-full rounded-full'>
-                                <button className="btn border-none w-full gradient-text text-sm sm:text-xl">Get Started Free</button>
+                                <button className="btn border-none w-full gradient-text text-sm sm:text-xl">Start Pro Trial</button>
                             </div>
                         </div>
                     </div>
@@ -101,41 +101,41 @@ const PricingSection = () => {
                 <div className="card bg-base-100 shadow-sm h-full">
                     <div className="card-body flex flex-col h-full">
                         <div className="">
-                            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold">Premium</h2>
-                            <p>Perfect for getting started</p>
+                            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold">Enterprise</h2>
+                            <p>For teams and businesses</p>
                         </div>
-                        <h3 className="text-xl sm:text-3xl  md:text-4xl">$29/<span className='text-xl'>Month</span></h3>
+                        <h3 className="text-xl sm:text-3xl  md:text-4xl">$99/<span className='text-xl'>Month</span></h3>
                         <ul className="mt-6 flex flex-col gap-2 text-xs">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>High-resolution image generation</span>
+                                <span>Everything in Pro</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Customizable style templates</span>
+                                <span>Team collaboration</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Batch processing capabilities</span>
+                                <span>Custom integrations</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>AI-driven image enhancements</span>
-                            </li>
-
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>AI-driven image enhancements</span>
+                                <span>Dedicated support</span>
                             </li>
 
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>AI-driven image enhancements</span>
+                                <span>SLA guarantee</span>
+                            </li>
+
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Custom branding</span>
                             </li>
 
                         </ul>
                         <div className="mt-6">
-                            <button className="btn gradient-bg rounded-full w-full text-white text-sm sm:text-xl">Get Started Free</button>
+                            <button className="btn gradient-bg rounded-full w-full text-white text-sm sm:text-xl">Contact Sales</button>
                         </div>
                     </div>
                 </div>

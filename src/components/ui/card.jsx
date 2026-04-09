@@ -9,7 +9,7 @@ const Card = ({ product, productCart, setProductCart }) => {
 
     const handleAddToCart = (product) => {
         if (isAdded) {
-            toast("Product already added!");
+            toast.error("Product already added!");
             return;
         }
         else {

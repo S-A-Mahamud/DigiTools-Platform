@@ -13,7 +13,7 @@ const Cart = ({ productCart, setProductCart }) => {
 
     const handleCheckout = () => {
         setProductCart([]);
-        toast("Thank you for your purchase!");
+        toast.success("Thank you for your purchase!");
     }
 
     const totalPrice = productCart.reduce((total, product) => total + product.price, 0);
@@ -53,7 +53,7 @@ const Cart = ({ productCart, setProductCart }) => {
                                 type="button"
                                 onClick={() => {
                                     handleRemoveFromCart(product.id);
-                                    toast("Product removed from cart!");
+                                    toast.success("Product removed from cart!");
                                 }}
                                 className='me-4 p-2 gradient-bg rounded-full cursor-pointer text-red-600 tooltip tooltip-left tooltip-gradient'
                                 data-tip="Remove"
